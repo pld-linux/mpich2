@@ -1,8 +1,8 @@
 Summary:	MPICH2 Early Release
 Summary(pl):	Wczesna wersja MPICH2
 Name:		mpich2
-Version:	0.92
-Release:	1
+Version:	0.93
+Release:	0.1
 License:	BSD-like
 Group:		Development/Libraries
 Source0:	ftp://ftp.mcs.anl.gov/pub/mpi/%{name}-%{version}.tar.gz
