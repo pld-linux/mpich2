@@ -1,15 +1,16 @@
 Summary:	MPICH2 Early Release
 Summary(pl):	Wczesna wersja MPICH2
 Name:		mpich2
-Version:	0.94
+Version:	0.96
 Release:	0.1
 License:	BSD-like
 Group:		Development/Libraries
 Source0:	ftp://ftp.mcs.anl.gov/pub/mpi/%{name}-%{version}.tar.gz
-# Source0-md5:	6cfa35fd49a31c8f858d69881921f28b
+# Source0-md5:	515c0690ccf7374cc3ccd5d2661ce269
 URL:		http://www-unix.mcs.anl.gov/mpi/
 BuildRequires:	gcc-g77
 BuildRequires:	libstdc++-devel
+Requires:	python >= 2.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,18 +45,18 @@ MPICH 1.2.X.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+# missing in install-docs
+install -d $RPM_BUILD_ROOT%{_mandir}/man{1,3} html/www{1,3}
 
-%{__make} install \
+%{__make} install install-docs \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	includedir=$RPM_BUILD_ROOT%{_includedir} \
 	exec_prefix=$RPM_BUILD_ROOT%{_exec_prefix} \
 	libdir=$RPM_BUILD_ROOT%{_libdir} \
 	bindir=$RPM_BUILD_ROOT%{_bindir} \
-	sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir}
-
-# install-docs is broken, so install manuals manually
-install -d $RPM_BUILD_ROOT%{_mandir}/man3
-install man/man3/*.3 $RPM_BUILD_ROOT%{_mandir}/man3
+	sysconfdir=$RPM_BUILD_ROOT%{_sysconfdir} \
+	mandir=$RPM_BUILD_ROOT%{_mandir} \
+	htmldir=html
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,10 +66,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES COPYRIGHT README{,.romio,.testing} doc/*/*.ps
+%doc CHANGES COPYRIGHT README{,.romio,.testing} doc/refman/mpiman.pdf
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.a
 %{_includedir}/*
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/*.conf
+%{_mandir}/man1/*.1*
 %{_mandir}/man3/*.3*
