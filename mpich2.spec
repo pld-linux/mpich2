@@ -1,12 +1,12 @@
 Summary:	MPICH2 Early Release
 Summary(pl):	Wczesna wersja MPICH2
 Name:		mpich2
-Version:	0.96
+Version:	0.96p2
 Release:	0.1
 License:	BSD-like
 Group:		Development/Libraries
 Source0:	ftp://ftp.mcs.anl.gov/pub/mpi/%{name}-%{version}.tar.gz
-# Source0-md5:	515c0690ccf7374cc3ccd5d2661ce269
+# Source0-md5:	96c9d1beaac07f60070888a61e38adc6
 URL:		http://www-unix.mcs.anl.gov/mpi/
 BuildRequires:	gcc-g77
 BuildRequires:	libstdc++-devel
