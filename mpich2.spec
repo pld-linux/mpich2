@@ -1,12 +1,12 @@
 Summary:	MPICH2 Early Release
 Summary(pl):	Wczesna wersja MPICH2
 Name:		mpich2
-Version:	0.93
+Version:	0.94
 Release:	0.1
 License:	BSD-like
 Group:		Development/Libraries
 Source0:	ftp://ftp.mcs.anl.gov/pub/mpi/%{name}-%{version}.tar.gz
-# Source0-md5:	4e585959f9caeb41ca7bc69edf5a1a7a
+# Source0-md5:	6cfa35fd49a31c8f858d69881921f28b
 URL:		http://www-unix.mcs.anl.gov/mpi/
 BuildRequires:	gcc-g77
 BuildRequires:	libstdc++-devel
@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYRIGHT README* ToDo doc/*/*.ps
+%doc CHANGES COPYRIGHT README{,.romio,.testing} doc/*/*.ps
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.a
