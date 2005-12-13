@@ -70,6 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/lib*.a
 %{_includedir}/*
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/*.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*.conf
 %{_mandir}/man1/*.1*
 %{_mandir}/man3/*.3*
