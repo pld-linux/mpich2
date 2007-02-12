@@ -1,5 +1,5 @@
 Summary:	MPICH2 Early Release
-Summary(pl):	Wczesna wersja MPICH2
+Summary(pl.UTF-8):   Wczesna wersja MPICH2
 Name:		mpich2
 Version:	0.97
 Release:	0.1
@@ -23,13 +23,13 @@ If you are looking for an implementation of MPI for use in building
 and running your favorite application(s), please obtain the MPICH
 1.2.X.
 
-%description -l pl
-Ten pakiet zawiera wczesn± wersjê MPICH2. Jest testowana przez autorów
-w ich ¶rodowisku, ale nie by³a jeszcze dostatecznie testowana przez
-u¿ytkowników zewnêtrznych. Ten pakiet jest dla zainteresowanych, jak
-bêdzie wygl±da³ MPICH nowej generacji oraz tym, którzy chc± pomóc w
-stabilizowaniu tej wersji do szerszej dystrybucji. Do zastosowañ
-produkcyjnych i innych wymagaj±cych stabilno¶ci nale¿y u¿ywaæ pakietu
+%description -l pl.UTF-8
+Ten pakiet zawiera wczesnÄ… wersjÄ™ MPICH2. Jest testowana przez autorÃ³w
+w ich Å›rodowisku, ale nie byÅ‚a jeszcze dostatecznie testowana przez
+uÅ¼ytkownikÃ³w zewnÄ™trznych. Ten pakiet jest dla zainteresowanych, jak
+bÄ™dzie wyglÄ…daÅ‚ MPICH nowej generacji oraz tym, ktÃ³rzy chcÄ… pomÃ³c w
+stabilizowaniu tej wersji do szerszej dystrybucji. Do zastosowaÅ„
+produkcyjnych i innych wymagajÄ…cych stabilnoÅ›ci naleÅ¼y uÅ¼ywaÄ‡ pakietu
 MPICH 1.2.X.
 
 %prep
