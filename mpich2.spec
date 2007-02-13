@@ -1,5 +1,5 @@
 Summary:	MPICH2 Early Release
-Summary(pl.UTF-8):   Wczesna wersja MPICH2
+Summary(pl.UTF-8):	Wczesna wersja MPICH2
 Name:		mpich2
 Version:	0.97
 Release:	0.1
