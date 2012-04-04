@@ -1,0 +1,11 @@
+--- mpich2-1.4.1p1/src/mpe2/src/slog2sdk/sbin/install-package.in~	2009-06-19 18:28:17.000000000 +0200
++++ mpich2-1.4.1p1/src/mpe2/src/slog2sdk/sbin/install-package.in	2012-04-04 20:37:13.458849908 +0200
+@@ -322,7 +322,7 @@
+     if [ -f $dest ] ; then $Show $RM $dest ; fi
+     if [ $just_testing = 0 ] ; then
+         sed \
+-        -e "s%^GUI_LIBDIR=.*%GUI_LIBDIR=$libdir%g" \
++        -e "s%^GUI_LIBDIR=.*%GUI_LIBDIR=$datadir/slog2sdk%g" \
+         $1 > $dest
+         rc=$?
+         if [ $rc != 0 ] ; then
