@@ -2,7 +2,7 @@ Summary:	MPICH2 Early Release
 Summary(pl.UTF-8):	Wczesna wersja MPICH2
 Name:		mpich2
 Version:	1.4.1p1
-Release:	0.1
+Release:	1
 License:	BSD-like
 Group:		Development/Libraries
 Source0:	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/%{version}/%{name}-%{version}.tar.gz
@@ -36,7 +36,7 @@ Summary:        Development files for mpich2
 Group:          Development/Libraries
 Requires:       %{name} = %{version}-%{release}
 Requires:       pkgconfig
-Requires:       gcc-gfortran
+Requires:       gcc-fortran
 
 %description devel
 Contains development headers and libraries for mpich2
