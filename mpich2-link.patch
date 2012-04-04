@@ -1,0 +1,22 @@
+--- mpich2-1.4.1p1/examples/Makefile.in~	2011-09-01 20:55:46.000000000 +0200
++++ mpich2-1.4.1p1/examples/Makefile.in	2012-04-04 15:12:36.002603213 +0200
+@@ -30,7 +30,7 @@
+ CPPFLAGS = 
+ DEFS     = 
+ INCLUDES = -I../src/include -I${top_srcdir}/src/include
+-LIBS   =
++LIBS   = -lmpl
+ 
+ EXTRA_PROGRAMS = pmandel pmandel_spawn pmandel_service pmandel_spaserv 	         pmandel_fence hellow icpi parent child srtest 		 spawn_merge_parent spawn_merge_child1 spawn_merge_child2
+ 
+--- mpich2-1.4.1p1/Makefile.in~	2011-09-01 20:55:44.000000000 +0200
++++ mpich2-1.4.1p1/Makefile.in	2012-04-04 15:19:56.082623068 +0200
+@@ -118,7 +118,7 @@
+ 	(cd lib && $(CREATESHLIB) --mode=link  -version-info "$(ABIVERSION)" -o lib${MPILIBNAME}f90.la  -rpath $(libdir) -L. @LDFLAGS_DEPS@ -l$(MPILIBNAME) @LIB_DEPS@ -ldflags "$(LDFLAGS)" $(LIBS))
+ # Build the shared library from the shared object files
+ lib/lib${MPICXXLIBNAME}.@SHLIB_EXT@: lib/lib${MPICXXLIBNAME}.la
+-	(cd lib && $(CREATESHLIB) --mode=link  -version-info "$(ABIVERSION)" -o lib${MPICXXLIBNAME}.la  -rpath $(libdir) -L. @LDFLAGS_DEPS@ -l$(MPILIBNAME) @LIB_DEPS@ -ldflags "$(LDFLAGS)" $(LIBS))
++	(cd lib && $(CREATESHLIB) --mode=link  -version-info "$(ABIVERSION)" -o lib${MPICXXLIBNAME}.la  -rpath $(libdir) -L. @LDFLAGS_DEPS@ -l$(MPILIBNAME) @LIB_DEPS@ -lstdc++ -ldflags "$(LDFLAGS)" $(LIBS))
+ 
+ # --------------------------------------------------------------------------
+ .libstamp0: 
