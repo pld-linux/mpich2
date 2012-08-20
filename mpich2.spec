@@ -2,7 +2,7 @@ Summary:	MPICH2 Early Release
 Summary(pl.UTF-8):	Wczesna wersja MPICH2
 Name:		mpich2
 Version:	1.4.1p1
-Release:	1
+Release:	2
 License:	BSD-like
 Group:		Development/Libraries
 Source0:	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/%{version}/%{name}-%{version}.tar.gz
